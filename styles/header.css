@@ -43,21 +43,30 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgb(192,192,192);
-    border-radius: 2px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+    padding-left: 20px;
     width: 0;
 
 }
 .searchbar::placeholder{
     font-family: Roboto,Arial;
     font-size: 16px;
-    padding-left: 10px;
+    padding-left: 0px;
+}
+.searchbar:focus{
+    outline: none;
+    border-color: rgb(114, 114, 255);
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.12);
 }
 .search-button{
     height: 39px;
     width: 64px;
     background-color: rgb(240,240,240);
     border-width: 1px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     border-style: solid;
     border-color: rgb(192,192,192);
     margin-left: -1px;
@@ -119,6 +128,7 @@
 
 .right-sec{
     width: 180px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -157,5 +167,76 @@
 .channel-icon{
     height: 32px;
     border-radius: 16px;
+    background: url("icons/my-channel1.jpeg") no-repeat center/cover;
     cursor: pointer;
+}
+.popup{
+    max-height: 85vh; /* maximum height = 80% of viewport height */
+    overflow-y: auto; /* enable vertical scrolling if content exceeds max-height */
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: -170px;
+    background-color: white;
+    padding: 10px;
+    z-index: 10000;
+    width: 280px;
+    margin-top: 50px;
+    border: 1px solid white;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    border-radius: 13px;
+    }
+.popup-elem {
+    border-bottom: 1px solid rgb(215, 215, 215);
+    padding: 8px 0;        /* use padding instead of fixed height */
+    display: flex;
+    flex-direction: column; /* stack rows inside vertically */
+    gap: 6px;              /* spacing between rows */
+    cursor: pointer;
+    align-items: flex-start; /* align children to left */
+}
+
+.popup-elem:last-child{
+    border-bottom: none; /* remove for the last one */
+}
+
+
+.popup-buttons{
+        display: flex;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.92);
+        align-items: center;   /* vertically centers logo + text */
+        gap: 8px;              /* space between logo and text */
+        padding: 6px 12px;     /* optional spacing inside row */
+        width: 100%;
+        justify-content: flex-start; /* keep them aligned left */
+        
+}
+.img-box{
+        height: 26px;
+        width: 26px;
+        overflow: hidden;
+ }
+.popup-header{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        padding: 6px 12px;
+        width: 100%;
+        font-size: 18px;
+        justify-content: flex-start;
+}
+.prfpic{
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+}
+.popup img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+.popup div{
+        font-family: Roboto, Arial;
 }

@@ -1,7 +1,7 @@
 
             .thumbnail{
                 width:100%;
-                
+                border-radius: 10px;
             }
             
 
@@ -25,7 +25,7 @@
             
             .video-info-grid{
                 display: grid;
-                grid-template-columns: 50px 1fr;
+                grid-template-columns: 50px 1fr 5px;
             }
 
             .profile-pic1{
@@ -52,7 +52,7 @@
             }
 
             .video-info{
-                
+                padding-right: 10px;
             }
             .video-auth,
             .video-stats{
@@ -64,6 +64,10 @@
             }
             .video-preview{
                cursor: pointer;
+            }
+
+            .vid_3dots{
+                font-size: 23px;
             }
 
             .video-grid{
