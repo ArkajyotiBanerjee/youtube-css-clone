@@ -167,7 +167,7 @@
 .channel-icon{
     height: 32px;
     border-radius: 16px;
-    background: url("icons/my-channel1.jpeg") no-repeat center/cover;
+    object-fit: cover;
     cursor: pointer;
 }
 .popup{
@@ -175,13 +175,13 @@
     overflow-y: auto; /* enable vertical scrolling if content exceeds max-height */
     display: none;
     position: absolute;
-    top: -40px;
-    left: -170px;
+    
     background-color: white;
     padding: 10px;
     z-index: 10000;
     width: 280px;
-    margin-top: 50px;
+    margin-top: 580px;
+    margin-left: -170px;
     border: 1px solid white;
     box-shadow: 0 0 7px rgba(0,0,0,0.1);
     border-radius: 13px;
